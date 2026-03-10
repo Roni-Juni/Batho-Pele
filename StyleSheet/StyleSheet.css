@@ -11,7 +11,8 @@ body {
 }
 
 /* NAVBAR */
-
+/* Nav container */
+/* Nav container */
 nav {
     display: flex;
     justify-content: space-between;
@@ -57,7 +58,7 @@ nav {
                 bottom: 0;
                 width: 0%;
                 height: 3px;
-                background-color: #00c853; /* green underline */
+                background-color: #00c853; 
                 transition: width 0.3s ease-in-out;
             }
 
@@ -65,13 +66,10 @@ nav {
             nav ul li a:hover::after {
                 width: 100%;
             }
-
-            /* Active page effect (underline always visible) */
             nav ul li a.active::after {
                 width: 100%;
             }
 
-            /* Optional: active page color change */
             nav ul li a.active {
                 color: #00c853;
             }
@@ -100,6 +98,53 @@ nav {
 
     nav img {
         height: 80px; 
+    }
+}
+
+/* ABOUT */
+.about {
+    text-align: center;
+    padding: 100px 10%;
+}
+
+.about-text {
+    max-width: 900px;
+    margin: auto;
+    line-height: 1.8;
+    font-size: 18px;
+}
+@media (max-width:768px) {
+
+    .about {
+        padding: 60px 6%;
+    }
+
+    .about-text {
+        font-size: 16px;
+    }
+}
+/* PRODUCTS*/
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 30px;
+}
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+@media (max-width:768px) {
+
+    .products {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card {
+        padding: 20px;
     }
 }
 
@@ -328,8 +373,15 @@ section {
         line-height: 1.6;
         font-weight: 500;
     }
+    /* BODY */
 
-
+body {
+    background: #f4f6f4;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
 /* FOOTER */
 footer {
@@ -338,6 +390,9 @@ footer {
     text-align: center;
     padding: 30px;
     margin-top: 60px;
+}
+footer {
+    margin-top: auto;
 }
 /* Spacing between partner section and copyright section */
 .At {
@@ -367,6 +422,13 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+}
+.bottom-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
 /* Contact */
@@ -417,15 +479,25 @@ footer {
 }
 
     .logo-list img {
-        height: 80px;
+        
         opacity: 0.95;
         transition: 0.3s;
+    }
+    .logo-list img {
+        height: 70px;
+        max-width: 100%;
     }
 
         .logo-list img:hover {
             opacity: 1;
             transform: scale(1.05);
         }
+@media (max-width:768px) {
+
+    .logo-list img {
+        height: 55px;
+    }
+}
 @media (max-width: 768px) {
     .bottom-footer {
         flex-direction: column;
