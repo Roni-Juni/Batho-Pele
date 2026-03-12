@@ -357,15 +357,16 @@ section {
     position: relative;
 }
 
-    .closing-line::before {
-        content: "";
-        display: block;
-        width: 400px;
-        height: 3px;
-        background: #2e7d32; 
-        margin: 0 auto 30px auto;
-        border-radius: 2px;
-    }
+  .closing-line::before {
+    content: "";
+    display: block;
+    width: 80%;
+    max-width: 400px;
+    height: 3px;
+    background: #2e7d32;
+    margin: 0 auto 30px auto;
+    border-radius: 2px;
+}
 
     .closing-line p {
         font-size: 20px;
@@ -526,4 +527,5 @@ hr {
     height: 1px;
     background: #ccc;
 }
+
 
